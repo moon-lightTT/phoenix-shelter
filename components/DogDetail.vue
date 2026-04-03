@@ -1,7 +1,7 @@
 <template>
   <div class="dog-detail-container">
     <div class="dog-detail" v-if="dog">
-      <NuxtLink to="/" class="back-button">← Назад к списку собак</NuxtLink>
+      <NuxtLink to="/" class="back-button">Назад к списку собак</NuxtLink>
       
       <div class="dog-detail-content">
         <div class="dog-detail-image">
@@ -16,7 +16,7 @@
           <p class="dog-description">{{ dog.description }}</p>
           
           <div class="dog-story">
-            <h3>История {{ dog.name }}</h3>
+            <h3>История</h3>
             <p>{{ dog.story }}</p>
             <p class="arrival-date">Поступил{{ dog.gender === 'female' ? 'а' : '' }} в приют в {{ dog.arrivalDate }}</p>
           </div>
@@ -35,7 +35,7 @@
     <!-- Модальное окно -->
     <div v-if="showForm" class="dog-detail-modal-overlay" @click="showForm = false">
       <div class="dog-detail-modal-content" @click.stop>
-        <h3>Заявка на знакомство с {{ dog?.name }}</h3>
+        <h3>Заявка на знакомство</h3>
         <form @submit.prevent="handleSubmit">
           <div class="dog-detail-form-group">
             <label>Ваше имя *</label>
