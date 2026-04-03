@@ -1,0 +1,12 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f0ea;
+  color: #D4AF94;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: #D4AF94;
+  position: relative;
+  font-weight: 500;
+}
