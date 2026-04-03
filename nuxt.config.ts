@@ -9,7 +9,14 @@ export default defineNuxtConfig({
     preset: 'static',
     output: {
       dir: '.output/public'
-    }
+    },
+    
+    publicAssets: [
+      {
+        baseURL: '/phoenix-shelter/',
+        dir: 'public'
+      }
+    ]
   },
   
   app: {
