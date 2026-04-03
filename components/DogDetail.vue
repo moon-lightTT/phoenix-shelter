@@ -5,7 +5,7 @@
       
       <div class="dog-detail-content">
         <div class="dog-detail-image">
-          <img :src="dog.image" :alt="dog.name" />
+          <img :src="getImagePath(dog.image)" :alt="dog.name" />
         </div>
         
         <div class="dog-detail-info">
@@ -94,7 +94,9 @@
 <script setup>
 import { dogs } from '~/data/dogs'
 
+const { getImagePath } = useImagePath()
 const route = useRoute()
+
 const dog = computed(() => dogs.find(d => d.id === parseInt(route.params.id)))
 
 const showForm = ref(false)

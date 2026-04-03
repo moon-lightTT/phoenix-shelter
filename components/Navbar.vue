@@ -14,9 +14,7 @@
 </template>
 
 <script setup>
-const getImagePath = (path) => {
-  return path
-}
+const { getImagePath } = useImagePath()
 
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId)

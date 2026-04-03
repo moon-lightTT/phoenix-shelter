@@ -7,7 +7,7 @@
         <div class="carousel-container">
           <NuxtLink :to="`/dog/${dog.id}`" v-for="(dog, idx) in infiniteDogs" :key="`${dog.id}-${idx}`">
             <div class="dog-card">
-              <img :src="dog.image" :alt="dog.name" />
+              <img :src="getImagePath(dog.image)" :alt="dog.name" />
               <h3>{{ dog.name }}</h3>
               <p>{{ dog.breed }}, {{ dog.age }} {{ getAgeText(dog.age) }}</p>
               <p>{{ dog.description }}</p>
@@ -22,6 +22,8 @@
 
 <script setup>
 import { dogs } from '~/data/dogs'
+
+const { getImagePath } = useImagePath()
 
 const wrapperRef = ref(null)
 const autoPlayRef = ref(null)
