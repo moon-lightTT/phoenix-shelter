@@ -23,16 +23,20 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm install 
+        run: npm install
       
       - name: Generate static site
         run: npm run generate
       
-      - name: List output files (debug)
-        run: ls -la .output/public/
+      - name: Fix nested public folder
+        run: |
+          if [ -d ".output/public/public" ]; then
+            cp -r .output/public/public/* .output/public/
+            rm -rf .output/public/public
+          fi
       
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: List output files
+        run: ls -la .output/public/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
