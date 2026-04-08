@@ -1,9 +1,9 @@
 export const dogs = [
   { 
     id: 1, 
-    name: "Дрейк", 
+    name: "Хан", 
     age: 3, 
-    breed: "Дворняжка", 
+    breed: "Пудель", 
     gender: "male",
     image: "/images/dog1.jpg", 
     description: "Очень дружелюбный, любит детей",
@@ -25,7 +25,7 @@ export const dogs = [
     id: 3, 
     name: "Рекс", 
     age: 2.5, 
-    breed: "Овчарка", 
+    breed: "Болгарская овчарка", 
     gender: "male",
     image: "/images/dog3.jpg", 
     description: "Спокойный, подходит для семьи",
